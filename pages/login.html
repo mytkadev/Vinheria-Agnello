@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a viewport para a responsividade -->
+    <meta name="author" content="Ana Vitória Silva // https://www.linkedin.com/in/anavitoriabaetas/"> <!-- Define a autoria do código -->
+    <link rel="stylesheet" href="/assets/css/login.css">
+
+    <title>Vinheria Agnello | Login</title> <!-- Título da página // máximo 65 caracteres-->
+
+    <link rel="shortcut icon" type="imagex/png" href="#"> <!-- Define o favicon da página -->
+</head>
+<body>
+
+  <div class="container">
+    <img src="../assets/img/navbar-logo.png" alt="">
+    <p>Bem-vindo à Agnello! Entre na sua conta para aproveitar produtos e assinaturas feitas especialmente para você.</p>
+    <div class="tabs">
+      <div class="tab active" onclick="showForm('login')">Login</div>
+      <div class="tab" onclick="showForm('cadastro')">Cadastro</div>
+    </div>
+
+    <form id="login" class="active" onsubmit="login(event)">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Senha" required>
+      <a class="forgot-password">Esqueceu sua senha?</a>
+      <button type="submit">Entrar</button>
+
+    </form>
+
+    <form id="cadastro" onsubmit="cadastro(event)">
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <div class="message" id="mensagem"></div>
+  </div>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>

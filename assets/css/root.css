@@ -1,0 +1,12 @@
+:root {
+    --main-color: #5B1730;
+    --hover-main-color: #8D425D;
+    --text-color: rgb(46, 11, 24);
+    --background-color: #EFE3E9;
+}
+
+body {
+    font-family: 'Inter', sans serif;
+    color: var(--text-color);
+    background-color: #EFE3E9;
+}
