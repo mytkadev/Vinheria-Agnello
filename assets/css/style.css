@@ -21,7 +21,7 @@ button {
 }
 
 .novidades {
-  margin-top: 104px;
+  margin:100px 200px;
 }
 /* Navbar Geral */
 .navbar {
@@ -279,9 +279,6 @@ button {
   display: none;
 }
 
-section:not(:first-of-type) {
-  margin:100px 200px;
-}
 
 h2 {
   font-family: var(--title-font);
@@ -371,4 +368,27 @@ h2 {
   display:flex;
   align-items:center;
   justify-content:space-between
+}
+
+.how-it-works{
+  background-color: var(--main-color);
+  margin:100px 0;
+  padding:50px 200px;
+  color:var(--light-background)
+}
+
+.how-it-works h2{
+  color:var(--light-background)
+}
+
+.how-it-works a{
+  color:var(--light-background);
+  text-decoration: none;
+}
+
+.know-section {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
 }
