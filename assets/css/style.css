@@ -278,3 +278,15 @@ button {
 .hidden {
   display: none;
 }
+
+section:not(:first-of-type) {
+  margin:100px 200px;
+}
+
+h2 {
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 50px;
+}
+
