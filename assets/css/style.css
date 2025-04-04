@@ -58,9 +58,9 @@ button {
   color: var(--hover-main-color);
 }
 
-/* Busca */
 .buscar {
   display: flex;
+  gap:8px;
   align-items: center;
   height: 35px;
   width: 350px;
@@ -71,7 +71,10 @@ button {
   box-sizing: border-box;
 }
 
-/* Carrinho e Login */
+.buscar input::placeholder {
+  color: var(--hover-main-color);
+}
+
 .cart-and-login {
   display: flex;
   align-items: center;
@@ -82,6 +85,8 @@ button {
   position: relative;
   margin-right: 16px;
 }
+
+
 
 .cart-number {
   position: absolute;
@@ -99,7 +104,6 @@ button {
   font-weight: 700;
 }
 
-/* Menu Mobile */
 .menu-toggle {
   display: none;
   background: none;
@@ -158,25 +162,62 @@ button {
 
 
 .cart-popup {
+
   position: absolute;
   top: 70px;
   right: 40px;
   width: 300px;
-  background-color: white;
+  background-color: var(--background-color);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   padding: 16px;
   z-index: 1000;
+}
+.buy {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
 }
 
 .cart-popup.hidden {
   display: none;
 }
 
+.wine-quant{
+  display:flex;
+  margin-top: 8px
+}
+
+.wine-quant-plus {
+  padding: 2px 8px;
+  background-color: var(--main-color);
+  border-radius: 0 8px 8px 0;
+  color: white;
+
+}
+
+.item-title {
+  font-size:18px;
+}
+.wine-quant-number{
+  padding: 4px 8px;
+  font-size: 14px;
+}
+.item-price {
+  font-size: 14px;
+}
+.wine-quant-minus {
+  padding: 4px 8px;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 8px 0 0 8px;
+
+}
+
 .cart-title {
-  font-weight: bold;
+  padding-bottom:10px;
   margin-bottom: 10px;
-  border-bottom: 2px;
+  border-bottom: 1px solid;
 }
 
 .cart-item {
@@ -187,14 +228,18 @@ button {
 
 .cart-item p {
   margin: 0;
-  font-size: 14px;
+}
+.cart-item-img {
+  padding: 2px 24px;
+  background-color:var(--light-background );
+  border-radius: 8px;
 }
 
 .checkout-btn {
   background-color: var(--main-color);
   color: white;
   padding: 8px;
-  width: 90%;
+  width: 95%;
   border-radius: 6px;
   text-align: center;
   font-weight: bold;

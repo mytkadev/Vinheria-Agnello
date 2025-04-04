@@ -18,14 +18,18 @@
     <div class="cart-popup hidden" id="cart-popup">
         <p class="cart-title">Seu carrinho até agora:</p>
         <div class="cart-item">
-          <img src="../assets/img/wine-cart.png" alt="Ravenwood Elite Merlot" >
+          <img src="../assets/img/wine-cart.png" alt="Ravenwood Elite Merlot" class="cart-item-img">
           <div>
-            <p>Ravenwood Elite Merlot</p>
-            <p>R$ 197,85</p>
-            <button><p></p></button>
+            <p class="item-title">Ravenwood Elite Merlot</p>
+            <p class="item-price">R$ 197,85</p>
+            <div class="wine-quant">            
+                <button class="wine-quant-minus"><img src="../assets/img/minus.png" alt="Diminuir uma unidade ou retirar do carrinho" width="12px"></button>
+                <p class="wine-quant-number">1</p>
+                <button class="wine-quant-plus"><img src="../assets/img/plus.png" alt="Acrescentar mais uma unidade no carrinho" width="12px"></button></div>
+
           </div>
         </div>
-        <div class="">
+        <div class="buy">
             <button class="checkout-btn">Finalizar compra</button>
         </div>
 
@@ -42,6 +46,7 @@
             <li><a href="#">Sobre nós</a></li>
         </ul>
         <div class="buscar">
+            <img src="../assets/img/search.png" alt="">
             <form role="search" >
                 <input type="text" placeholder="Buscar vinhos" name="buscar">
             </form>
