@@ -29,16 +29,38 @@ function showForm(formId) {
     menu.classList.toggle('open');
   });
 
-  const cartButton = document.querySelector('.cart');
-  const cartPopup = document.getElementById('cart-popup');
+const cartButton = document.querySelector('.cart');
+const cartPopup = document.getElementById('cart-popup');
 
-  cartButton.addEventListener('click', () => {
+
+const loginButton = document.getElementById('login-button');
+const loginPopup = document.getElementById('login-popup');
+
+cartButton.addEventListener('click', (event) => {
+  event.stopPropagation();
   cartPopup.classList.toggle('hidden');
-  });
-  
-  document.addEventListener('click', function (event) {
-    if (!cartPopup.contains(event.target) && !cartButton.contains(event.target)) {
-      cartPopup.classList.add('hidden');
-    }
-  });
-  
+
+
+  if (!loginPopup.classList.contains('hidden')) {
+    loginPopup.classList.add('hidden');
+  }
+});
+
+loginButton.addEventListener('click', (event) => {
+  event.stopPropagation();
+  loginPopup.classList.toggle('hidden');
+
+  if (!cartPopup.classList.contains('hidden')) {
+    cartPopup.classList.add('hidden');
+  }
+});
+
+document.addEventListener('click', function (event) {
+  if (!cartPopup.contains(event.target) && !cartButton.contains(event.target)) {
+    cartPopup.classList.add('hidden');
+  }
+
+  if (!loginPopup.contains(event.target) && !loginButton.contains(event.target)) {
+    loginPopup.classList.add('hidden');
+  }
+});
