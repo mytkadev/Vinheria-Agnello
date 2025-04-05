@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+:root {
+    --main-color: #5B1730;
+    --hover-main-color: #8D425D;
+    --text-color: rgb(46, 11, 24);
+    --background-color: #EFE3E9;
+    --light-background: #F6EBF0;
+    --title-font: 'Instrument Serif', sans serif;
+}
+
+body {
+    font-family: 'Inter', sans serif;
+    color: var(--text-color);
+    background-color: #EFE3E9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
