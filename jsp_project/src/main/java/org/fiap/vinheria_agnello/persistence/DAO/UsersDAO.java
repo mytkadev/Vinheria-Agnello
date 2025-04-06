@@ -1,5 +1,6 @@
 package org.fiap.vinheria_agnello.persistence.DAO;
 
+import org.fiap.vinheria_agnello.model.User;
 import org.fiap.vinheria_agnello.persistence.ConnectionFactory;
 
 import java.sql.*;
@@ -17,6 +18,29 @@ public class UsersDAO {
 
             if (rs.next()) {
                 return rs.getString("senha");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public User getUser(String email) {
+        String sql = "SELECT id,email,senha FROM usuarios WHERE email = ?";
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("email");
+                return new User(id,name,email);
+
             }
 
         } catch (SQLException e) {

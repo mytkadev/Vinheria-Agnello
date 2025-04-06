@@ -25,7 +25,7 @@
     </div>
 
     <!-- Formulário de Login -->
-    <form action="${pageContext.request.contextPath}/login" method="post" id="login" class="active">
+    <form action="${pageContext.request.contextPath}/servlets/login" method="post" id="login" class="active">
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Senha" required>
         <a href="#" class="forgot-password">Esqueceu sua senha?</a>
@@ -33,14 +33,14 @@
     </form>
 
     <!-- Formulário de Cadastro -->
-    <form action="${pageContext.request.contextPath}/register" method="post" id="cadastro" method="post">
+    <form action="${pageContext.request.contextPath}/servlets/register" method="post" id="cadastro" method="post">
         <input type="text" placeholder="Nome" name="name" required>
         <input type="email" placeholder="Email" name="email" required>
         <input type="password" placeholder="Senha" name="password" required>
         <button type="submit">Cadastrar</button>
     </form>
 
-//TODO:Alterar atributos das mensagens baseadas em erro.
+
     <% String msg = (String) request.getAttribute("mensagem"); %>
     <% if (msg != null) { %>
     <div id="mensagem" class="message"><%= msg %></div>

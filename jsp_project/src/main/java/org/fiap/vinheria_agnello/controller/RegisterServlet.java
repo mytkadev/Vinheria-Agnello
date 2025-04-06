@@ -8,7 +8,7 @@ import org.fiap.vinheria_agnello.service.AuthService;
 
 import java.io.IOException;
 
-@WebServlet(name = "RegisterServlet", value = "/register")
+@WebServlet(name = "RegisterServlet", value = "/servlets/register")
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -35,7 +35,7 @@ public class RegisterServlet extends HttpServlet {
         }
 
         try {
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
         } catch (ServletException e) {
             throw new RuntimeException(e);
         }
