@@ -1,0 +1,543 @@
+@import url('./root.css');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+button,
+input {
+  all: unset;
+}
+
+button {
+  cursor: pointer;
+}
+
+.banner {
+  width: 100%;
+}
+
+.novidades {
+  margin:100px 200px;
+}
+/* Navbar Geral */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 60px;
+  background-color: #EFE3E9;
+  box-sizing: border-box;
+  position: relative;
+  position: fixed;
+top: 0;
+width:100%;
+z-index: 100;
+}
+
+.pages-and-search {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.pages {
+  display: flex;
+  list-style-type: none;
+  gap: 2px;
+}
+
+.pages a {
+  text-decoration: none;
+  color: var(--main-color);
+  margin-right: 32px;
+
+}
+
+.pages a:hover {
+  color: var(--hover-main-color);
+}
+
+.buscar {
+  display: flex;
+  gap:8px;
+  align-items: center;
+  height: 35px;
+  width: 350px;
+  padding: 0 13px;
+  font-size: 14px;
+  background-color: #DFCDD6;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.buscar input::placeholder {
+  color: var(--hover-main-color);
+}
+
+.cart-and-login {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+.cart {
+  position: relative;
+  margin-right: 16px;
+}
+
+
+
+.cart-number {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 6px;
+  height: 6px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DFCDD6;
+  background-color: var(--main-color);
+  border-radius: 100px;
+  font-weight: 700;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ------------------------- */
+/*      MEDIA QUERIES       */
+/* ------------------------- */
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .pages-and-search {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    background-color: #EFE3E9;
+    box-shadow: 0 4px 6px rgba(2, 0, 0, 0.2);
+  }
+
+  .pages-and-search.open {
+    display: flex;
+  }
+
+  .pages {
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .pages a {
+    display: block;
+    margin: 0 0 16px;
+    border: 
+  }
+
+  .login-button {
+    margin-right: 10px;
+  }
+
+  .buscar {
+    max-width:
+  }
+}
+
+
+.cart-popup {
+
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  width: 300px;
+  background-color: var(--background-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 16px;
+  z-index: 1000;
+}
+.buy {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.cart-popup.hidden {
+  display: none;
+}
+
+.wine-quant{
+  display:flex;
+  margin-top: 8px
+}
+
+.wine-quant-plus {
+  padding: 2px 8px;
+  background-color: var(--main-color);
+  border-radius: 0 8px 8px 0;
+  color: white;
+
+}
+
+.item-title {
+  font-size:18px;
+}
+.wine-quant-number{
+  padding: 4px 8px;
+  font-size: 14px;
+}
+.item-price {
+  font-size: 14px;
+}
+.wine-quant-minus {
+  padding: 4px 8px;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 8px 0 0 8px;
+
+}
+
+.cart-title {
+  padding-bottom:10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid;
+}
+
+.cart-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cart-item p {
+  margin: 0;
+}
+.cart-item-img {
+  padding: 2px 24px;
+  background-color:var(--light-background );
+  border-radius: 8px;
+}
+
+.checkout-btn {
+  background-color: var(--main-color);
+  color: white;
+  padding: 8px;
+  width: 95%;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.login-popup {
+
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  width: 250px;
+  background-color: var(--background-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 16px;
+  z-index: 1000;
+
+}
+
+.login-popup form {
+  display: flex;
+}
+
+
+.login-popup button[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  padding: 8px;
+  width: 95%;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  display:flex;
+  justify-content:center;
+}
+.hidden {
+  display: none;
+}
+
+
+h2 {
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 50px;
+  color: var(--main-color)
+}
+
+.wine-card {
+  width: 250px;
+}
+
+.wine-card-img {
+  display:flex;
+  height:300px;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  background-color: var(--light-background);
+  border-radius: 16px 16px 0 0;
+}
+
+.favorite-btn{
+  position: absolute;
+  bottom: 16px;
+  left: 24px;
+  z-index: 10; 
+
+}
+
+.add-to-cart-btn {
+  background-color: var(--main-color);
+  width: 100%;
+  padding:12px;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color: var(--background-color);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0 0 16px 16px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--hover-main-color)
+}
+
+.wine-info{
+  margin-top:14px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.name-and-desc{
+  display:flex;
+  flex-direction:column;
+}
+
+.wine-details {
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.wine-type{
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.wine-price{
+  font-weight:500;
+}
+
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.news-title {
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.how-it-works{
+  background-color: var(--main-color);
+  padding:50px 200px;
+  color:var(--light-background)
+}
+
+.how-it-works h2{
+  color:var(--light-background)
+}
+
+.how-it-works a{
+  color:var(--light-background);
+  text-decoration: none;
+}
+
+.know-section {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+
+.assinaturas{
+    margin:100px 200px;
+}
+
+.assinaturas-btn{
+    background-color: var(--main-color);
+    padding:16px;
+    border-radius:8px;
+    width:220px;
+    height:70px;
+    display:flex;
+    flex-direction:column;
+    cursor:pointer;
+}
+
+.btn-title{
+    font-size:20px;
+    font-weight:700;
+}
+
+.assinaturas-btns{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:var(--light-background);
+    margin-top:20px;
+}
+
+.assinaturas-desc{
+    display:flex;
+    flex-direction:column;
+    width:70%;
+}
+.assinaturas-title{
+    color: var(--main-color);
+    margin-bottom:16px;
+
+}
+.assinaturas-title h3{
+    font-size:64px;
+}
+
+.assinatura-desc{
+    font-size:20px;
+}
+
+.duvida{
+    font-size:14px;
+    width:380px
+}
+
+.assinaturas-info{
+    display:flex;
+    margin-top:40px;
+    justify-content:space-between;
+}
+
+.assinaturas-desctitle{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding-bottom:40px;
+}
+
+.assinaturas-btn1{
+    background-color:transparent;
+    border: solid 1px var(--main-color);
+    border-radius:8px;
+    padding:8px 16px;
+    display:flex;
+    alignt-items:center;
+    justify-content:center;
+    gap:4px;
+
+}
+.assinaturas-btn2{
+    background-color:var(--main-color);
+    color:var(--light-background);
+    border-radius:8px;
+    border: solid 2px var(--main-color);
+    padding:8px 16px;
+}
+.assinaturas-btn1-title{
+    display:flex;
+    align-items:center;
+}
+.quest-e-assinatura-btns{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    font-size:18px;
+    margin-top:16px;
+}
+
+.assinaturas-titlevector{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.agnello-owners{
+    display:flex;
+    gap:100px;
+    font-size:16px
+}
+.about-us{
+    margin:100px 200px;
+}
+.about-us-desc{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.instagram{
+    background-color:var(--main-color);
+    display:flex;
+    flex-direction:column;
+    padding-bottom:50px;
+
+
+}
+.instagram h2{
+    color: var(--light-background)
+}
+.instagram-title{
+    display:flex;
+    justify-content:space-between;
+    padding:80px 200px 20px 200px;
+}
+.instagram-images{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+footer{
+    background-color:var(--main-color);
+    color:var(--light-background);
+    display:flex;
+    justify-content:space-between;
+    padding:40px
+}
+footer a{
+    color:var(--light-background);
+}

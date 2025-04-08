@@ -64,3 +64,20 @@ document.addEventListener('click', function (event) {
     loginPopup.classList.add('hidden');
   }
 });
+
+document.querySelectorAll('.assinaturas-btn').forEach(button => {
+  button.addEventListener('click', () => {
+
+    const hiddenDesc = button.querySelector('.btn-desc').textContent;
+
+    const targetDesc = document.querySelector('.assinatura-desc');
+
+    targetDesc.textContent = hiddenDesc;
+
+    const title = button.querySelector('.btn-title').textContent;
+    const subtitle = button.querySelector('.btn-subtitle').textContent;
+
+    document.querySelector('.assinaturas-title h3').textContent = title.toUpperCase();
+    document.querySelector('.assinaturas-title h4').textContent = subtitle;
+  });
+});
