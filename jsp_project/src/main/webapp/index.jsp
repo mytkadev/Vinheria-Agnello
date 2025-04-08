@@ -1,4 +1,5 @@
-<%--
+<%@ page import="org.fiap.vinheria_agnello.model.Subscription" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Matheus
   Date: 4/5/2025
@@ -17,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a viewport para a responsividade -->
     <meta name="description" content="A Vinheria Agnello une tradição e inovação para oferecer vinhos selecionados, experiências únicas e um pedaço da Itália na sua taça."> <!-- Essa é a parte que irá aparecer debaixo do nome do site no Google -->
     <meta name="keywords" content="vinhos, loja de vinhos, comprar vinho online, assinatura de vinhos, clube do vinho, adega online, vinhos por assinatura, vinho em casa, vinho tinto, vinho branco, vinho rosé, vinho seco, vinho suave, espumante, vinho nacional, vinho importado, vinho chileno, vinho argentino, vinho português, vinho italiano, vinho francês, vinho brasileiro, presente vinho, vinho para jantar, harmonização de vinhos, vinho para iniciantes, seleção de vinhos, sommelier online, vinho em São Paulo, entrega de vinhos SP, loja de vinhos SP"> <!-- Define keywords para ferramentas de busca -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Vinheria Agnello | Loja e Assinatura de Vinhos</title> <!-- Título da página // máximo 65 caracteres-->
     <link rel="shortcut icon" type="imagex/png" href="#"> <!-- Define o favicon da página -->
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -140,7 +141,6 @@
     </section>
 
     <section aria-labelledby="como-funciona" class="how-it-works">
-
         <h2 id="como-funciona">Como funciona nossa assinatura?</h2>
         <p>Comece sua aventura pelo mundo dos vinhos com Agnello e descubra a magia de cada garrafa selecionada especialmente para você. Estamos aqui para tornar cada gole uma experiência memorável!</p>
         <div>
@@ -154,64 +154,83 @@
         </div>
     </section>
 
-    <section aria-labelledby="assinaturas">
-        <h2 id="assinaturas">Nossas assinaturas</h2>
-        <nav aria-label="Filtros de assinatura">
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+
+    <section aria-labelledby="assinaturas" class="assinaturas">
+        <div class="assinaturas-titlevector">
+            <h2 id="assinaturas">Nossas assinaturas</h2>
+            <img src="./assets/img/vector.png" alt=""></div>
+        <nav aria-label="Filtros de assinatura" class="assinaturas-btns">
+            <c:forEach var="subscription" items="${subscriptions}">
+                <button class="assinaturas-btn">
+                    <p class="btn-title">${subscription.name}</p>
+                    <p class="btn-subtitle">${subscription.subtitle}</p>
+                    <p class="hidden btn-desc">${subscription.description}</p>
+                </button>
+            </c:forEach>
         </nav>
-        <article>
-            <div>
-                <header>
-                    <h3>Título do modelo de assinatura</h3>
-                    <h4>Subtítulo do modelo de assinatura</h4>
-                </header>
-                <p>Descrição da assinatura</p>
-                <div>
-                    <p>Ficou em dúvida? Preencha nosso questionário e descubra a assinatura que mais combina com você!</p>
-                    <button>Descobrir minha assinatura ideal</button>
-                    <button>Assinar</button>
+                <div class="assinaturas-info">
+                    <div class="assinaturas-desctitle">
+                        <div class="assinaturas-desc">
+                            <div class="assinaturas-title">
+                                <h3 >CONFORTO</h3>
+                                <h4>Vinhos personalizados ao seu gosto.</h4>
+                            </div>
+                            <p class="assinatura-desc">Receba vinhos perfeitamente alinhados ao seu perfil de sabor segundo suas avaliações e seu questionário de vinhos. Esta assinatura é customizada para ecoar seu paladar, garantindo que cada garrafa seja uma escolha segura e satisfatória.
+                            </p>
+                        </div>
+                        <div>
+
+                            <div class="quest-e-assinatura">            <p class="duvida">Ficou em dúvida? Preencha nosso questionário e descubra a assinatura que mais combina com você!</p>
+                                <div class="quest-e-assinatura-btns">            <button class="assinaturas-btn1"><p class="assinaturas-btn1-title">Descobrir minha assinatura ideal</p> <img src="../assets/img/arrow-right.png" alt=""></button>
+                                    <button class="assinaturas-btn2">Assinar</button></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <figure>
+                        <img src="./assets/img/wine-images.png" alt="Imagem dos vinhos Agnello">
+                    </figure>
                 </div>
-            </div>
-            <figure>
-                <img src="" alt="Imagem dos vinhos Agnello">
-            </figure>
-        </article>
     </section>
 
-    <section aria-labelledby="sobre-nos">
-        <h2 id="sobre-nos">Conheça mais sobre a Agnello</h2>
-        <div>
-            <figure>
-                <img src="" alt="Imagem de Giulio e Bianca Agnello">
-            </figure>
-            <article>
-                <p>
-                    A Vinheria Agnello é o fruto da paixão e tradição passada de geração para geração. Fundada por Giulio Agnello, um imigrante italiano apaixonado pelo vinho e pelas histórias que cada garrafa conta, a vinheria é um pedaço da Itália no coração da cidade. Hoje, Giulio compartilha a gestão da vinheria com sua filha, Bianca Agnello, que cresceu entre os vinhedos e barris, aprendendo com seu pai não só a arte da vinicultura, mas também o valor do atendimento ao cliente e a importância de criar experiências memoráveis.
 
-                    Giulio, com seu vasto conhecimento e contatos no mundo dos vinhos, é conhecido por sua habilidade em selecionar os melhores rótulos, enquanto Bianca traz um toque moderno ao negócio, focando na sustentabilidade e na inovação. Juntos, eles garantem que a Vinheria Agnello ofereça não apenas vinhos de qualidade, mas também uma jornada cultural e sensorial para seus clientes.
+    <section aria-labelledby="sobre-nos" class="about-us">
+        <h2 id="sobre-nos" >Conheça mais sobre a Agnello</h2>
+        <div class="agnello-owners">
+            <figure>
+                <img src="./assets/img/agnello-owners.png" alt="Imagem de Giulio e Bianca Agnello">
+            </figure>
+            <article class="about-us-desc">
+                <p >
+                    A Vinheria Agnello é o fruto da paixão e da tradição passada de geração para geração. Fundada por Giulio Agnello, um imigrante italiano apaixonado pelo vinho e pelas histórias que cada garrafa conta, a vinheria é um pedaço da Itália no coração da cidade. Mais do que um espaço de vendas, é um refúgio para apreciadores e curiosos, onde cada visita é um convite à descoberta.
+                    <br>
+                    <br>
+                    Hoje, Giulio compartilha a gestão da vinheria com sua filha, Bianca Agnello, que cresceu entre vinhedos e barris, absorvendo desde cedo os segredos da vinicultura e o verdadeiro valor da hospitalidade. Com sua visão contemporânea, Bianca integrou à tradição familiar um olhar voltado para a sustentabilidade, a tecnologia e a experiência do cliente, trazendo frescor e inovação ao negócio.
+                    <br>
+                    <br>
+                    Juntos, pai e filha unem o melhor dos dois mundos: Giulio, com sua vasta experiência, é referência na curadoria de rótulos raros e exclusivos, e mantém relações próximas com pequenos produtores na Itália e em outras regiões clássicas do vinho. Bianca, por sua vez, transformou a Vinheria Agnello em um espaço multifuncional e sensorial — onde eventos, degustações temáticas, harmonizações e experiências culturais criam momentos únicos para quem cruza suas portas.
+                    <br>
+                    <br>
+                    Cada detalhe, da escolha dos vinhos à ambientação da loja, foi pensado para transportar os visitantes a uma verdadeira viagem pelos sabores, aromas e histórias que só o vinho pode proporcionar. A Vinheria Agnello não vende apenas garrafas — entrega memórias engarrafadas, celebrações de vidas bem vividas e conexões que atravessam o tempo.
                 </p>
                 <div>
-                    <img src="" alt="Assinatura Giulio Agnello">
-                    <img src="" alt="Assinatura Bianca Agnello">
+                    <img src="./assets/img/agnello-signatures.png" alt="Assinatura Giulio Agnello" class="agnello-signatures">
                 </div>
             </article>
         </div>
     </section>
 
-    <section aria-labelledby="instagram">
-        <div>
+    <section aria-labelledby="instagram" class="instagram">
+        <div class="instagram-title">
             <h2 id="instagram">Nos siga no instagram<br>@agnellovinheria</h2>
-            <button aria-label="Abrir Instagram">Botão circular instagram</button>
+            <button aria-label="Abrir Instagram"><img src="./assets/img/instagram-btn.png" alt=""></button>
         </div>
-        <div>
-            <figure><img src="" alt="Imagem Instagram 1"></figure>
-            <figure><img src="" alt="Imagem Instagram 2"></figure>
-            <figure><img src="" alt="Imagem Instagram 3"></figure>
-            <figure><img src="" alt="Imagem Instagram 4"></figure>
-            <figure><img src="" alt="Imagem Instagram 5"></figure>
+        <div class="instagram-images">
+            <figure><img src="./assets/img/insta1.png" alt="Imagem Instagram 1"></figure>
+            <figure><img src="./assets/img/insta2.png" alt="Imagem Instagram 2"></figure>
+            <figure><img src="./assets/img/insta3.png" alt="Imagem Instagram 3"></figure>
+            <figure><img src="./assets/img/insta4.png" alt="Imagem Instagram 4"></figure>
+
         </div>
     </section>
 </main>
