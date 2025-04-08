@@ -541,3 +541,53 @@ footer{
 footer a{
     color:var(--light-background);
 }
+
+.login-popup-logged {
+
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  width: 300px;
+  background-color: var(--background-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.profile-btns{
+  display:flex;
+  gap:8px;
+  text-decoration:none;
+  padding:14px;
+}
+.profile-btn-icon{
+  width:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+.profile-btn-title{
+
+  color:var(--main-color);
+
+}
+
+.login-popup-logged{
+  display:flex;
+  flex-direction:column;
+
+}
+
+.login-popup-logged a:not(:last-child) {
+  border-bottom:solid 1px rgba(91, 23, 48, 0.15);
+}
+.profile-btns:hover {
+  background-color: rgba(91, 23, 48, 0.15);
+}
+.login-popup-logged > :first-child:hover {
+  border-radius:12px 12px 0 0;
+}
+.login-popup-logged > :last-child:hover {
+  border-radius:0 0 12px 12px;
+}
