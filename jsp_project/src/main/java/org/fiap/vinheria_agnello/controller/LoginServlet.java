@@ -27,7 +27,6 @@ public class LoginServlet extends HttpServlet {
             SessionService.setAttribute(request,"user",dao.getUser(email));
             response.sendRedirect(request.getContextPath() + "/index");
         } else {
-            //TODO: Estilizar mensagens de erro e padronizar.
             request.setAttribute("mensagem", "Credenciais incorretas.");
             try {
                 request.getRequestDispatcher("/login.jsp").forward(request, response);

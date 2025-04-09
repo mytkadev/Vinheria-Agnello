@@ -8,7 +8,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%//#TODO:Adicionar referência de todos os assets vindo do S3.%>
 <html lang="pt-BR">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +35,6 @@
                 <button class="wine-quant-minus"><img src="assets/img/minus.png" alt="Diminuir uma unidade ou retirar do carrinho" width="12px"></button>
                 <p class="wine-quant-number">1</p>
                 <button class="wine-quant-plus"><img src="assets/img/plus.png" alt="Acrescentar mais uma unidade no carrinho" width="12px"></button></div>
-
         </div>
     </div>
     <div class="buy">
@@ -45,11 +43,6 @@
 
 </div>
 
-<div class="login-popup hidden" id="login-popup">
-    <form id="login" onsubmit="login(event)">
-        <button type="submit">Fazer login</button>
-    </form>
-</div>
 
 
 
@@ -69,9 +62,21 @@
                 </form>
             </div>
         </div>
+
+
+        <div class="">
+            <div class=""><div class="login-popup-logged" id="login-popup-logged">
+                <a href="#" class="profile-btns"><div class="profile-btn-icon"><img src="./assets/img/user-circle.png" alt="Perfil do usuário"></div><p class="profile-btn-title">Meu perfil</p></a>
+                <a href="#" class="profile-btns"><div class="profile-btn-icon"><img src="./assets/img/winelist.png" alt="Lista de vinhos desejados"></div><p class="profile-btn-title">Winelist</p></a>
+                <a href="#" class="profile-btns"><div class="profile-btn-icon"><img src="./assets/img/cart-vector.png" alt="Pedidos do usuário"></div><p class="profile-btn-title">Meus pedidos</p></a>
+                <a href="#" class="profile-btns"><div class="profile-btn-icon"><img src="./assets/img/logout.png" alt="Sair"></div><p class="profile-btn-title">Sair</p></a>
+            </div></div>
+
+        </div>
+
         <div class="cart-and-login">
             <button>
-                <div class="cart"><img src="assets/img/cart.png" alt="" width="32px">
+                <div class="cart"><img src="./assets/img/cart.png" alt="" width="32px">
                     <div class="cart-number"><p>0</p></div>
                 </div>
             </button>
@@ -79,11 +84,11 @@
 
             <button class="login-button" id="login-button">
                 <div>
-                    <img src="assets/img/logged-out-profile.png" alt="Foto de perfil" width="32px">
+                    <img src="./assets/img/logged-out-profile.png" alt="Foto de perfil" width="32px">
                 </div>
             </button>
             <button class="menu-toggle" aria-label="Abrir menu">
-                <img src="assets/img/menu.png" alt="Ícone de menu" width="32">
+                <img src="./assets/img/menu.png" alt="Ícone de menu" width="32">
             </button>
         </div>
 
@@ -91,6 +96,7 @@
 
     </nav>
 </header>
+
 
 <main>
     <section aria-label="Banners">
@@ -132,7 +138,6 @@
                                 <span>${wine.grape}</span>
                             </p>
                         </div>
-
                         <p class="wine-price">R$ ${wine.price}</p>
                     </div>
                 </article>
@@ -154,7 +159,6 @@
         </div>
     </section>
 
-
     <section aria-labelledby="assinaturas" class="assinaturas">
         <div class="assinaturas-titlevector">
             <h2 id="assinaturas">Nossas assinaturas</h2>
@@ -175,13 +179,15 @@
                                 <h3 >CONFORTO</h3>
                                 <h4>Vinhos personalizados ao seu gosto.</h4>
                             </div>
-                            <p class="assinatura-desc">Receba vinhos perfeitamente alinhados ao seu perfil de sabor segundo suas avaliações e seu questionário de vinhos. Esta assinatura é customizada para ecoar seu paladar, garantindo que cada garrafa seja uma escolha segura e satisfatória.
-                            </p>
+                            <p class="assinatura-desc">Receba vinhos perfeitamente alinhados ao seu perfil de sabor segundo suas avaliações e seu questionário de vinhos. Esta assinatura é customizada para ecoar seu paladar, garantindo que cada garrafa seja uma escolha segura e satisfatória.</p>
                         </div>
                         <div>
-
-                            <div class="quest-e-assinatura">            <p class="duvida">Ficou em dúvida? Preencha nosso questionário e descubra a assinatura que mais combina com você!</p>
-                                <div class="quest-e-assinatura-btns">            <button class="assinaturas-btn1"><p class="assinaturas-btn1-title">Descobrir minha assinatura ideal</p> <img src="../assets/img/arrow-right.png" alt=""></button>
+                            <div class="quest-e-assinatura">
+                                <p class="duvida">Ficou em dúvida? Preencha nosso questionário e descubra a assinatura que mais combina com você!</p>
+                                <div class="quest-e-assinatura-btns">
+                                    <button class="assinaturas-btn1">
+                                        <p class="assinaturas-btn1-title">Descobrir minha assinatura ideal</p>
+                                        <img src="./assets/img/arrow-right.png" alt=""></button>
                                     <button class="assinaturas-btn2">Assinar</button></div>
                             </div>
 
@@ -230,7 +236,6 @@
             <figure><img src="./assets/img/insta2.png" alt="Imagem Instagram 2"></figure>
             <figure><img src="./assets/img/insta3.png" alt="Imagem Instagram 3"></figure>
             <figure><img src="./assets/img/insta4.png" alt="Imagem Instagram 4"></figure>
-
         </div>
     </section>
 </main>

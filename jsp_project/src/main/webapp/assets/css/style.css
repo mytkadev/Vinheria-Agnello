@@ -283,7 +283,7 @@ z-index: 100;
 
 
 h2 {
-    font-family: var(--title-font), serif;
+  font-family: var(--title-font);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 50px;
@@ -336,6 +336,8 @@ h2 {
   display:flex;
   flex-direction:column;
   gap:8px;
+  text-decoration:none;
+  color:var(--text-color)
 }
 
 .name-and-desc{
@@ -464,7 +466,7 @@ h2 {
     border-radius:8px;
     padding:8px 16px;
     display:flex;
-    align-items:center;
+    alignt-items:center;
     justify-content:center;
     gap:4px;
 
@@ -538,4 +540,360 @@ footer{
 }
 footer a{
     color:var(--light-background);
+}
+
+.login-popup-logged {
+
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  width: 300px;
+  background-color: var(--background-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.profile-btns{
+  display:flex;
+  gap:8px;
+  text-decoration:none;
+  padding:14px;
+}
+.profile-btn-icon{
+  width:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+.profile-btn-title{
+
+  color:var(--main-color);
+
+}
+
+.login-popup-logged{
+  display:flex;
+  flex-direction:column;
+
+}
+
+.login-popup-logged a:not(:last-child) {
+  border-bottom:solid 1px rgba(91, 23, 48, 0.15);
+}
+.profile-btns:hover {
+  background-color: rgba(91, 23, 48, 0.15);
+}
+.login-popup-logged > :first-child:hover {
+  border-radius:12px 12px 0 0;
+}
+.login-popup-logged > :last-child:hover {
+  border-radius:0 0 12px 12px;
+}
+.marketplace-banner{
+  width:100%;
+
+}
+
+.marketplace{
+  display:flex;
+  justify-content:center;
+  margin-top:64px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wine-card {
+    width: 250px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .marketplace {
+    display: flex;
+    flex-direction: column;
+  }
+  .filters-container {
+    display: block;
+    margin-bottom: 20px; /* Espaço entre filtros e cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+  .wine-card {
+    width: 200px;
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+.filters {
+  display: none;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.filters.open {
+  display: block;
+  max-height: 1000px; /* Limite para a altura máxima do filtro */
+}
+.footer-marketplace{
+  padding:16px;
+}
+aside{
+  margin-right:50px;
+  width:320px;
+  display:flex;
+  flex-direction:column;
+  gap:20px
+}
+.ordenar{
+  display:flex;
+  justify-content:end;
+  padding-right:20px;
+  gap:16px
+}
+.filters-title{
+  display:flex;
+  justify-content:space-between;
+
+  border-bottom: solid 1px var(--main-color)
+}
+.filters-title h2{
+  font-weight:600;
+  font-size:20px;
+  text-transform:capitalize;
+  font-family: "Inter", sans-serif;
+}
+.clear-filters{
+  font-size:14px;
+  display:flex;
+  gap:4px;
+  align-items:center;
+}
+.found-products{
+  font-size:16px;
+  font-weight:300;
+}
+.products-quant{
+  font-weight:700;
+}
+
+.filter-checkbox{
+  text-decoration:none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  background-color: #CAB0BB;
+  border: 2px solid #CAB0BB;
+  appearance: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color:var(--main-color);
+  border-color:var(--main-color);
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 2px;
+}
+.filter-checkbox li{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  font-size:14px;
+}
+.filter-checkbox{
+  display:flex;
+  flex-direction:column;
+  gap:4px
+}
+.all-filters{
+  color:var(--main-color)
+}
+.filter-title{
+  font-size:14px;
+}
+.filter-title-comp{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  border-bottom: solid 1px rgba(91, 23, 48, 0.25);
+  width:100%;
+  padding:8px 4px;
+  margin: 8px 0;
+}
+
+.product-section{
+  margin: 120px 0;
+  padding: 30px 0;
+  box-sizing:border-box;
+  background-color: #F5F5F5;
+  height:700px;
+  position:relative;
+  display:flex;
+  justify-content:center
+}
+.product-wine-img{
+  position:absolute;
+  top:-70px;
+  left:200px
+}
+.wine{
+  width:70%;
+  margin-left:500px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.wine-first-section{
+  margin-bottom:20px
+}
+.wine-firstsection a{
+  text-decoration:none;
+  color:var(--main-color);
+  font-size:12px;
+}
+.wine-firstsection h1{
+  margin-top:20px;
+  font-size:48px;
+  color:var(--main-color);
+}
+.price-av{
+  display:flex;
+  align-items:center;
+  font-size:40px;
+  gap:16px;
+  color:var(--main-color)
+}
+
+.wine-secondsection{
+  width:30%;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  height:100%
+
+}
+
+.wine h3{
+  font-size:16px;
+  color:var(--main-color)
+}
+
+.add-product{
+  width:100%;
+  display:flex;
+  gap:16px;
+  color:var(--light-background);
+  background-color:var(--main-color);
+  padding:10px 0;
+  font-weight:700;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px
+}
+.wine-secondthird{
+  display:flex;
+  margin:20px 0;
+  height:100%;
+  gap:25px;
+}
+
+.wine-tec{
+  display:flex;
+  gap:20px;
+  margin-top:25px;
+}
+
+.comments-section{
+  align-items:center;
+  display:flex;
+  justify-content:center;
+  margin-bottom:32px
+
+}
+
+.section{
+  width:80%
+}
+.comments-section h4{
+  font-size:36px;
+  color:var(--main-color);
+}
+.comments-section-title{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding-bottom:24px;
+  border-bottom:solid 1px var(--main-color)
+}
+.comments-section-title span{
+  font-size:24px;
+  font-weight:600;
+}
+.avaliation{
+  display:flex;
+  align-items:start;
+  color:var(--main-color);
+  gap:10px;
+}
+.comments-section-title p{
+  text-transform:uppercase;
+  font-size:10px;
+}
+.comment-user{
+  display:flex;
+  gap:16px;
+}
+.comment{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  padding:24px 0;
+  border-bottom: solid 1px var(--hover-main-color)
+}
+.username{
+  font-size:24px;
+  font-weight: 700
+}
+.comment-date{
+  font-size:14px;
+  display:flex;
+  gap:8px
+}
+.comment-title{
+  font-size:20px;
+  margin-bottom:4px
 }
