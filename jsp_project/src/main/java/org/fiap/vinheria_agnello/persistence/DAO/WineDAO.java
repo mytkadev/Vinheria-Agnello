@@ -13,14 +13,13 @@ import java.util.List;
 public class WineDAO {
 
     public List<Wine> getLatestWines(int limit) {
-        String sql = "SELECT title, origin_image, type_image, grape, price, image_url, new FROM wines WHERE new = true LIMIT ?";
+        String sql = "SELECT title, origin_image, type_image, grape, price, image_url, new FROM wines WHERE new = true ";
 
         List<Wine> wines = new ArrayList<>();
 
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setInt(1, limit);
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
