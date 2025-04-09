@@ -81,3 +81,4 @@ document.querySelectorAll('.assinaturas-btn').forEach(button => {
     document.querySelector('.assinaturas-title h4').textContent = subtitle;
   });
 });
+ 
