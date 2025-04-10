@@ -769,7 +769,7 @@ input[type="checkbox"]:checked::after {
   top:-70px;
   left:200px
 }
-.wine{
+.product-winesection{
   width:70%;
   margin-left:500px;
     display: flex;
