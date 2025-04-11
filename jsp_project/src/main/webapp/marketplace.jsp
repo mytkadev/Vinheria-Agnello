@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Matheus
@@ -17,7 +18,7 @@
 
 <header>
     <nav class="navbar">
-        <a href="#"><img src="./assets/img/navbar-logo.png" alt="Logo da Vinheria Agnello" width="125"></a>
+        <a href="${pageContext.request.contextPath}/index"><img src="./assets/img/navbar-logo.png" alt="Logo da Vinheria Agnello" width="125"></a>
         <div class="pages-and-search">
             <ul class="pages">
                 <li><a href="#">Vinhos</a></li>
@@ -58,8 +59,9 @@
 
     <div class="marketplace">
         <aside>
-            <p class="found-products"><span class="products-quant">9</span> produtos encontrados</p>
-            <button><img src="./assets/img/aside-img.png" alt="Conheça nossas assinaturas e receba vinhos exclusivos e com a sua cara"></button>
+            <p class="found-products"><span class="products-quant">${wines.size()}</span> produtos encontrados</p>
+            <button><img src="./assets/img/aside-img.png"
+                         alt="Conheça nossas assinaturas e receba vinhos exclusivos e com a sua cara"></button>
             <div class="filters-title">
                 <h2>Filtros</h2>
                 <button class="clear-filters">
@@ -73,11 +75,11 @@
                         <h3 class="filter-title">Faixa de preço</h3></button>
 
                     <ul class="filter-checkbox">
-                        <li><input type="checkbox" /> Até R$40</li>
-                        <li><input type="checkbox" /> R$40 a R$60</li>
-                        <li><input type="checkbox" /> R$60 a R$100</li>
-                        <li><input type="checkbox" /> R$100 a R$200</li>
-                        <li><input type="checkbox" /> Acima de R$200</li>
+                        <li><input type="checkbox"/> Até R$40</li>
+                        <li><input type="checkbox"/> R$40 a R$60</li>
+                        <li><input type="checkbox"/> R$60 a R$100</li>
+                        <li><input type="checkbox"/> R$100 a R$200</li>
+                        <li><input type="checkbox"/> Acima de R$200</li>
                     </ul>
                 </div>
                 <div>
@@ -86,11 +88,11 @@
                     </button>
 
                     <ul class="filter-checkbox">
-                        <li><input type="checkbox" /> Tinto</li>
-                        <li><input type="checkbox" /> Rosé</li>
-                        <li><input type="checkbox" /> Branco</li>
-                        <li><input type="checkbox" /> Seco</li>
-                        <li><input type="checkbox" /> Suave</li>
+                        <li><input type="checkbox"/> Tinto</li>
+                        <li><input type="checkbox"/> Rosé</li>
+                        <li><input type="checkbox"/> Branco</li>
+                        <li><input type="checkbox"/> Seco</li>
+                        <li><input type="checkbox"/> Suave</li>
                     </ul>
                 </div>
                 <div>
@@ -99,13 +101,13 @@
                     </button>
 
                     <ul class="filter-checkbox">
-                        <li><input type="checkbox" /> Argentina</li>
-                        <li><input type="checkbox" /> Itália</li>
-                        <li><input type="checkbox" /> França</li>
-                        <li><input type="checkbox" /> Portugal</li>
-                        <li><input type="checkbox" /> Espanha</li>
-                        <li><input type="checkbox" /> Brasil</li>
-                        <li><input type="checkbox" /> Chile</li>
+                        <li><input type="checkbox"/> Argentina</li>
+                        <li><input type="checkbox"/> Itália</li>
+                        <li><input type="checkbox"/> França</li>
+                        <li><input type="checkbox"/> Portugal</li>
+                        <li><input type="checkbox"/> Espanha</li>
+                        <li><input type="checkbox"/> Brasil</li>
+                        <li><input type="checkbox"/> Chile</li>
                     </ul>
                 </div>
                 <div>
@@ -114,9 +116,9 @@
                     </button>
 
                     <ul class="filter-checkbox">
-                        <li><input type="checkbox" /> Cabernet Sauvignon</li>
-                        <li><input type="checkbox" /> Blend</li>
-                        <li><input type="checkbox" /> Pinot Noir</li>
+                        <li><input type="checkbox"/> Cabernet Sauvignon</li>
+                        <li><input type="checkbox"/> Blend</li>
+                        <li><input type="checkbox"/> Pinot Noir</li>
                     </ul>
                 </div>
                 <div>
@@ -125,9 +127,9 @@
                     </button>
 
                     <ul class="filter-checkbox">
-                        <li><input type="checkbox" /> Navarra</li>
-                        <li><input type="checkbox" /> Borgonha</li>
-                        <li><input type="checkbox" /> Toscana</li>
+                        <li><input type="checkbox"/> Navarra</li>
+                        <li><input type="checkbox"/> Borgonha</li>
+                        <li><input type="checkbox"/> Toscana</li>
                     </ul>
                 </div>
                 <div>
@@ -136,9 +138,9 @@
                     </button>
 
                     <ul class="filter-checkbox">
-                        <li><input type="checkbox" /> Pizza</li>
-                        <li><input type="checkbox" /> Massa</li>
-                        <li><input type="checkbox" /> Queijos</li>
+                        <li><input type="checkbox"/> Pizza</li>
+                        <li><input type="checkbox"/> Massa</li>
+                        <li><input type="checkbox"/> Queijos</li>
 
                     </ul>
                 </div>
@@ -151,27 +153,27 @@
                 <div>
                     <h3>Faixa de preço</h3>
                     <ul>
-                        <li><input type="checkbox" /> Até R$40</li>
-                        <li><input type="checkbox" /> R$40 a R$60</li>
-                        <li><input type="checkbox" /> R$60 a R$100</li>
-                        <li><input type="checkbox" /> R$100 a R$200</li>
-                        <li><input type="checkbox" /> Acima de R$200</li>
+                        <li><input type="checkbox"/> Até R$40</li>
+                        <li><input type="checkbox"/> R$40 a R$60</li>
+                        <li><input type="checkbox"/> R$60 a R$100</li>
+                        <li><input type="checkbox"/> R$100 a R$200</li>
+                        <li><input type="checkbox"/> Acima de R$200</li>
                     </ul>
                 </div>
                 <div>
                     <h3>Tipo</h3>
                     <ul>
-                        <li><input type="checkbox" /> Tinto</li>
-                        <li><input type="checkbox" /> Rosé</li>
-                        <li><input type="checkbox" /> Branco</li>
+                        <li><input type="checkbox"/> Tinto</li>
+                        <li><input type="checkbox"/> Rosé</li>
+                        <li><input type="checkbox"/> Branco</li>
                     </ul>
                 </div>
                 <div>
                     <h3>País</h3>
                     <ul>
-                        <li><input type="checkbox" /> Brasil</li>
-                        <li><input type="checkbox" /> Argentina</li>
-                        <li><input type="checkbox" /> França</li>
+                        <li><input type="checkbox"/> Brasil</li>
+                        <li><input type="checkbox"/> Argentina</li>
+                        <li><input type="checkbox"/> França</li>
                     </ul>
                 </div>
             </aside>
@@ -189,233 +191,40 @@
             </div>
 
             <div class="produtos">
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
+                <c:forEach var="wine" items="${wines}">
+                    <article class="wine-card">
+                        <a href="${pageContext.request.contextPath}/product?wineID=${wine.id}">
+                            <div class="wine-top-labels">
+                                <span class="wine-tag hidden">Achamos que você vai gostar</span>
+                                <span class="wine-tag hidden">Mais vendidos</span>
+                            </div>
+                            <div class="wine-card-img">
+                                <button class="favorite-btn"><img
+                                        src="<%= request.getContextPath() %>/assets/img/like.png" alt="Botão de curtir">
+                                </button>
+                                <img src="${wine.imageUrl}" alt="Garrafa de vinho ${wine.title}">
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn">
+                            <img src="<%= request.getContextPath() %>/assets/img/cart-white.png" alt="" width="18">
+                            Adicionar ao carrinho
+                        </button>
+                        <a href="${pageContext.request.contextPath}/product?wineID=${wine.id}" class="wine-info">
+                            <div class="name-and-desc">
+                                <h3 class="wine-title">${wine.title}</h3>
+                                <p class="wine-details">
+                                    <img src="${wine.originImage}" alt="origem do vinho"><span> • </span><span
+                                        class="wine"><img src="${wine.typeImage}"
+                                                          alt="">Tinto</span><span> • </span><span>${wine.grape}</span>
+                                </p>
+                            </div>
+                            <p class="wine-price">R$ ${wine.price}</p>
+                        </a>
+                    </article>
+                </c:forEach>
 
             </div>
+
 
             <button>Mostrar mais produtos</button>
         </section>

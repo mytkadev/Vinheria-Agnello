@@ -48,10 +48,10 @@
 
 <header>
     <nav class="navbar">
-        <a href="#"><img src="assets/img/navbar-logo.png" alt="Logo da Vinheria Agnello" width="125"></a>
+        <a href="${pageContext.request.contextPath}/index"><img src="assets/img/navbar-logo.png" alt="Logo da Vinheria Agnello" width="125"></a>
         <div class="pages-and-search">
             <ul class="pages">
-                <li><a href="#">Vinhos</a></li>
+                <li><a href="${pageContext.request.contextPath}/marketplace">Vinhos</a></li>
                 <li><a href="#">Assinaturas</a></li>
                 <li><a href="#">Sobre nós</a></li>
             </ul>
@@ -112,34 +112,33 @@
         <div class="news-cards">
             <c:forEach var="wine" items="${wines}">
                 <article class="wine-card">
-                    <div class="wine-top-labels">
-                        <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                        <span class="wine-tag hidden">Mais vendidos</span>
-                    </div>
-
-                    <div class="wine-card-img">
-                        <button class="favorite-btn">
-                            <img src="<%= request.getContextPath() %>/assets/img/like.png" alt="Botão de curtir">
-                        </button>
-                        <img src="${wine.imageUrl}" alt="Garrafa de vinho ${wine.title}">
-                    </div>
-
+                    <a href="${pageContext.request.contextPath}/product?wineID=${wine.id}">
+                        <div class="wine-top-labels">
+                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
+                            <span class="wine-tag hidden">Mais vendidos</span>
+                        </div>
+                        <div class="wine-card-img">
+                            <button class="favorite-btn"><img
+                                    src="<%= request.getContextPath() %>/assets/img/like.png" alt="Botão de curtir">
+                            </button>
+                            <img src="${wine.imageUrl}" alt="Garrafa de vinho ${wine.title}">
+                        </div>
+                    </a>
                     <button class="add-to-cart-btn">
                         <img src="<%= request.getContextPath() %>/assets/img/cart-white.png" alt="" width="18">
                         Adicionar ao carrinho
                     </button>
-
-                    <div class="wine-info">
+                    <a href="${pageContext.request.contextPath}/product?wineID=${wine.id}" class="wine-info">
                         <div class="name-and-desc">
                             <h3 class="wine-title">${wine.title}</h3>
                             <p class="wine-details">
-                                <img src="${wine.originImage}" alt="Origem do vinho"><span> • </span>
-                                <span class="wine"><img src="${wine.typeImage}" alt="Tipo"></span><span> • </span>
-                                <span>${wine.grape}</span>
+                                <img src="${wine.originImage}" alt="origem do vinho"><span> • </span><span
+                                    class="wine"><img src="${wine.typeImage}"
+                                                      alt="">Tinto</span><span> • </span><span>${wine.grape}</span>
                             </p>
                         </div>
                         <p class="wine-price">R$ ${wine.price}</p>
-                    </div>
+                    </a>
                 </article>
             </c:forEach>
         </div>

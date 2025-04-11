@@ -1,6 +1,7 @@
 package org.fiap.vinheria_agnello.model;
 
 public class Wine {
+    private int id;
     private String title;
     private String originImage;
     private String typeImage;
@@ -9,7 +10,7 @@ public class Wine {
     private String imageUrl;
     private boolean _new;
 
-    public Wine(String title, String originImage, String typeImage, String grape, double price, String imageUrl,boolean _new) {
+    public Wine(String title, String originImage, String typeImage, String grape, double price, String imageUrl,boolean _new,int id) {
         this.title = title;
         this.originImage = originImage;
         this.typeImage = typeImage;
@@ -17,6 +18,7 @@ public class Wine {
         this.price = price;
         this.imageUrl = imageUrl;
         this._new = _new;
+        this.id = id;
     }
 
     // Getters
@@ -27,4 +29,5 @@ public class Wine {
     public double getPrice() { return price; }
     public String getImageUrl() { return imageUrl; }
     public boolean isNew() { return _new; }
+    public int getId() { return id; }
 }
