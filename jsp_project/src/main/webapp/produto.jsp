@@ -56,7 +56,8 @@
         <img src="./assets/img/product-wine.png" alt="" class="product-wine-img">
         <div class="product-winesection">
             <div class="wine-firstsection">
-                <a href="/pages/marketplace.html">vinhos /</a>
+                <a href="./marketplace.jsp">vinhos /</a>
+                <%--<a href="/pages/marketplace.html">vinhos /</a>--%>
                 <h1>Brunello di Montalcino</h1>
                 <div class="price-av">
                     <p>R$ 197,85</p>
