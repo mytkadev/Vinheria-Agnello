@@ -246,31 +246,6 @@
                             <span class="wine-tag hidden">Mais vendidos</span>
                         </div>
                         <div class="wine-card-img">
-                            <button class="favorite-btn"><img src="../assets/img/like.png" alt="Botão de curtir"></button>
-                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
-                        </div>
-                    </a>
-                    <button class="add-to-cart-btn">
-                        <img src="./assets/img/cart-white.png" alt="" width="18">
-                        Adicionar ao carrinho
-                    </button>
-                    <a href="#" class="wine-info">
-                        <div class="name-and-desc">
-                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
-                            <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
-                            </p>
-                        </div>
-                        <p class="wine-price">R$ 197,85</p>
-                    </a>
-                </article>
-                <article class="wine-card">
-                    <a href="#">
-                        <div class="wine-top-labels">
-                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
-                            <span class="wine-tag hidden">Mais vendidos</span>
-                        </div>
-                        <div class="wine-card-img">
                             <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
                             <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
                         </div>
@@ -408,7 +383,32 @@
                         <div class="name-and-desc">
                             <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
                             <p class="wine-details">
-                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="../assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
+                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
+                            </p>
+                        </div>
+                        <p class="wine-price">R$ 197,85</p>
+                    </a>
+                </article>
+                <article class="wine-card">
+                    <a href="#">
+                        <div class="wine-top-labels">
+                            <span class="wine-tag hidden">Achamos que você vai gostar</span>
+                            <span class="wine-tag hidden">Mais vendidos</span>
+                        </div>
+                        <div class="wine-card-img">
+                            <button class="favorite-btn"><img src="./assets/img/like.png" alt="Botão de curtir"></button>
+                            <img src="./assets/img/wine-card.png" alt="Garrafa de vinho Agnello">
+                        </div>
+                    </a>
+                    <button class="add-to-cart-btn">
+                        <img src="./assets/img/cart-white.png" alt="" width="18">
+                        Adicionar ao carrinho
+                    </button>
+                    <a href="#" class="wine-info">
+                        <div class="name-and-desc">
+                            <h3 class="wine-title">Gewürztraminer da Alsácia</h3>
+                            <p class="wine-details">
+                                <img src="./assets/img/argentina.png" alt="origem do vinho: argentina"><span> • </span><span class="wine"><img src="./assets/img/tinto.png" alt="">Tinto</span><span> • </span><span>Bobal</span>
                             </p>
                         </div>
                         <p class="wine-price">R$ 197,85</p>
